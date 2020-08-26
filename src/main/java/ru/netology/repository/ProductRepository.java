@@ -5,7 +5,7 @@ import ru.netology.domain.Product;
 public class ProductRepository {
   private Product[] items = new Product[0];
 
-  public void save(Product item) {
+  public void save(Product item) {//  сохранять Product'ы,
     int length = items.length + 1;
     Product[] tmp = new Product[length];
     System.arraycopy(items, 0, tmp, 0, items.length);
@@ -16,7 +16,7 @@ public class ProductRepository {
 
   public Product[] findAll() {
     return items;
-  }
+  } //получать все сохранённые Product'ы
 
   public Product findById(int id) {
     for (Product item : items) {
@@ -27,7 +27,7 @@ public class ProductRepository {
     return null;
   }
 
-  public void removeById(int id) {
+  public void removeById(int id) {  //удалять по id
     int length = items.length - 1;
     Product[] tmp = new Product[length];
     int index = 0;
