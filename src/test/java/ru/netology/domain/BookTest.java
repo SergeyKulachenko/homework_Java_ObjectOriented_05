@@ -21,12 +21,6 @@ class BookTest {
     }
 
     @Test
-    public void shouldNotCastToDifferentClass() {
-        Product product = new TShirt();
-        TShirt shirt = (TShirt) product;
-    }
-
-    @Test
     public void shouldUseOverridedMethod() {
         Product product = new Book();
         // Вопрос к аудитории: чей метод вызовется?
